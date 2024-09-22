@@ -250,6 +250,8 @@ class HomeController extends Controller
             $count = '';
         }
 
-        return view('home.contact', compact('count'));
+        $googleMapsApiKey = env('GOOGLE_MAPS_API_KEY');
+
+        return view('home.contact', compact('count', 'googleMapsApiKey'));
     }
 }
